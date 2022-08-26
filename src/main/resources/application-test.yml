@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: test
+    include: file-logging
+  datasource:
+    hikari:
+      asis:
+        jdbc-url: jdbc:oracle:thin:@172.20.63.252:1526:ORCL
+#        jdbc-url: jdbc:oracle:thin:@172.20.1.201:1521:ORCL
+        username: gcrl
+        password: gcrl
+        driver-class-name: oracle.jdbc.OracleDriver
+        idleTimeout: 0
+        connectionTimeout: 10000
+        dblink: DBLINK_10G_GCRL
+        maximum-pool-size: 15
+      tobe:
+        jdbc-url: jdbc:oracle:thin:@172.20.1.95:1521:NLIST
+        username: gc_lis
+        password: new1234
+        driver-class-name: oracle.jdbc.OracleDriver
+        idleTimeout: 0
+        connectionTimeout: 10000
+        maximum-pool-size: 15
+
+  config:
+    use-legacy-processing: true
+
+logging:
+  level:
+    root: INFO
+    com.mig: INFO
+

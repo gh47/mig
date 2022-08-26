@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: mig
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Seoul
+  freemarker:
+    checkTemplateLocation: false
+
+server:
+  port: 8080
+
+sync:
+  report:
+    page-size: 20
+
+logging:
+  file:
+    path: ./log

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mig.repository.mig.MigBaseMapper">
+
+    <select id="selectMigSysdate" parameterType="HashMap" resultType="HashMap">
+        SELECT /* Mig */ TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS DT
+        FROM DUAL
+    </select>
+
+    <select id="selectMigSqlTblList" parameterType="HashMap" resultType="migSqlTblVO">
+         SELECT SEQ             AS seq,
+                TBL_ASIS        AS tblAsis,
+                TBL_TOBE        AS tblTobe,
+                COL_NAME        AS colName,
+                COL_DATA_TYPE   AS colDataType,
+                SQL_WHERE       AS sqlWhere,
+                SQL_ORDER       AS sqlOrder,
+                DIV_PAGINATION  AS divPagination,
+                DIV_OUT_CNT     AS divOutCnt,
+                DIV_IN_CNT      AS divInCnt,
+                USE_YN          AS useYn,
+                INS_DT          AS insDt,
+                NOTE            AS note
+           FROM MIG_SQL_TBL
+          WHERE 1=1
+            AND USE_YN = #{USE_YN	,jdbcType=VARCHAR}
+          ORDER BY SEQ
+    </select>
+	
+</mapper>
