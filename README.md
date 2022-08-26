@@ -1,6 +1,7 @@
 # mig
 
 gradle bootRun -Dspring.profiles.active=dev,watch
+
 java -Xms2048m -Xmx4096m -jar -Dspring.profiles.active=dev,watch E:\project\mig\build\libs\mig-0.0.1-SNAPSHOT.jar
 
 CREATE TABEL MIG_SQL_TBL 
