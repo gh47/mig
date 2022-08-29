@@ -30,13 +30,16 @@ public class MigJobService {
     public int migJobMain() {
         int rtn = 0;
         List<MigSqlTblVO> migTblColList = migBaseService.migBaseMain();;
-        log.debug("MigJobService MigJobMain migTblColMap size = {}", migTblColList.size() );
+        log.info("MigJobService MigJobMain migTblColMap size = {}", migTblColList.size() );
 
         log.info("getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- START");
         for(MigSqlTblVO migSqlTblVO : migTblColList) {
+            log.info("migSqlTblVO = {}", "[seq:" + migSqlTblVO.getSeq() + "] asis-" + migSqlTblVO.getTblAsis() + " ---> tobe-" + migSqlTblVO.getTblTobe());
+
             int divOutCnt = migSqlTblVO.getDivOutCnt();
             int totalCnt = migSelectDao.selectCount(migSqlTblVO);
             log.debug("MigJobService migJobMain divOutCnt/totalCnt  = {}", divOutCnt + "/" + totalCnt);
+
             for (int i = 0; i < totalCnt; i+= divOutCnt ) {
                 List<Map<String, Object>> getSelectList = migSelectDao.migSelectMain(migSqlTblVO, i, divOutCnt);
                 migInsertDao.migInsertMain(migSqlTblVO, getSelectList);

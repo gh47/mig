@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,7 +44,6 @@ public class MigInsertDao {
         insertList.clear();
         return rtn;
     }
-
 
     @Transactional(propagation = Propagation.REQUIRES_NEW, transactionManager = "tobeTxManager")
     public void insertTobeTable(MigSqlTblVO migSqlTblVO, List<Map<String, Object>> insertList) {
@@ -86,7 +86,7 @@ public class MigInsertDao {
         });
 
         timer.stop();
-        log.info("Insert -> time in seconds = {}", insertList.size() +" / " + timer.getTotalTimeSeconds());
+        log.debug("Insert -> time in seconds = {}", insertList.size() +" / " + timer.getTotalTimeSeconds());
 
     }
 

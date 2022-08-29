@@ -112,7 +112,6 @@ public class MigBaseService {
     public String migInsertStringBuilder(MigSqlTblVO migSqlTblVO) {
         List<String> colList = Arrays.asList(migSqlTblVO.getColName().split(","));
         StringBuilder sqlSb = new StringBuilder();
-        if("ORACLE".equals(migSqlTblVO.getDivPagination())) {
             sqlSb.append("INSERT INTO ");
             sqlSb.append(migSqlTblVO.getTblTobe());
             sqlSb.append(" ");
@@ -130,9 +129,6 @@ public class MigBaseService {
                 sqlSb.append("?");
             }
             sqlSb.append(")");
-        } else {
-
-        }
         sqlSb.append(" ");
 
         return sqlSb.toString();

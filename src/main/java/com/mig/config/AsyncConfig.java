@@ -31,4 +31,15 @@ public class AsyncConfig {
         taskExecutor.initialize();
         return taskExecutor;
     }
+
+    @Bean(name = "threadPoolTaskDb")
+    public Executor threadPoolTaskDb() {
+        ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
+        taskExecutor.setCorePoolSize(20);
+        taskExecutor.setMaxPoolSize(20);
+        taskExecutor.setQueueCapacity(100);
+        taskExecutor.setThreadNamePrefix("db-");
+        taskExecutor.initialize();
+        return taskExecutor;
+    }
 }

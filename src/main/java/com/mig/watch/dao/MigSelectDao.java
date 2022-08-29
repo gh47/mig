@@ -7,14 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementSetter;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StopWatch;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.*;
 
 @Slf4j
@@ -75,35 +70,29 @@ public class MigSelectDao {
         }
 
         return jdbcTemplate.query(sql,
-                new PreparedStatementSetter() {
-                    @Override
-                    public void setValues(PreparedStatement preparedStatement) throws SQLException {
-                        preparedStatement.setInt(1, s);
-                        preparedStatement.setInt(2, e);
-                    }
+                preparedStatement -> {
+                    preparedStatement.setInt(1, s);
+                    preparedStatement.setInt(2, e);
                 },
 
-                new RowMapper<Map<String, Object>>() {
-                    @Override
-                    public Map<String, Object> mapRow(ResultSet rs, int i) throws SQLException {
-                        Map<String, Object> map = new HashMap<String, Object>();
-                        for(String key : colInfoMap.keySet()) {
-                            String dataType = colInfoMap.get(key).getColDataType();
-                            if("NUMBER".equals(dataType)) {
-                                map.put(key, rs.getBigDecimal(key));
-                            } else if("CHAR".equals(dataType) || "VARCHAR2".equals(dataType)) {
-                                map.put(key, rs.getString(key));
-                            } else if("DATE".equals(dataType)) {
-                                map.put(key, rs.getDate(key));
-                            } else if("BLOB".equals(dataType)) {
-                                map.put(key, rs.getBlob(key));
-                            } else if("CLOB".equals(dataType)) {
-                                map.put(key, rs.getClob(key));
-                            }
+                (rs, i) -> {
+                    Map<String, Object> map = new HashMap<String, Object>();
+                    for(String key : colInfoMap.keySet()) {
+                        String dataType = colInfoMap.get(key).getColDataType();
+                        if("NUMBER".equals(dataType)) {
+                            map.put(key, rs.getBigDecimal(key));
+                        } else if("CHAR".equals(dataType) || "VARCHAR2".equals(dataType)) {
+                            map.put(key, rs.getString(key));
+                        } else if("DATE".equals(dataType)) {
+                            map.put(key, rs.getDate(key));
+                        } else if("BLOB".equals(dataType)) {
+                            map.put(key, rs.getBlob(key));
+                        } else if("CLOB".equals(dataType)) {
+                            map.put(key, rs.getClob(key));
                         }
-
-                        return map;
                     }
+
+                    return map;
                 });
 
     }
