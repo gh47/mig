@@ -54,7 +54,6 @@ public class MigJobService {
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     private void saveList(MigSqlTblVO migSqlTblVO, List<Map<String, Object>> getSelectList) {
         migInsertDao.migInsertMain(migSqlTblVO, getSelectList);
-        getSelectList.clear();
     }
 
 }

@@ -1161,3 +1161,84 @@ java.sql.SQLRecoverableException: 접속 종료
 2022-08-29 16:34:23.819  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
 2022-08-29 16:34:23.820  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-08-29 16:34:23.834  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-29 16:45:39.772  INFO 18124 --- [main] com.mig.MigApplication                   : Starting MigApplication using Java 1.8.0_211 on G with PID 18124 (E:\project\mig\build\libs\mig-0.0.1-SNAPSHOT.jar started by User in E:\project\mig)
+2022-08-29 16:45:39.779  INFO 18124 --- [main] com.mig.MigApplication                   : The following 3 profiles are active: "dev", "file-logging", "watch"
+2022-08-29 16:45:42.108  INFO 18124 --- [main] com.mig.MigApplication                   : Started MigApplication in 3.166 seconds (JVM running for 3.942)
+2022-08-29 16:45:42.116  INFO 18124 --- [main] com.mig.watch.WatchLauncher              : spring.profiles.active = [dev, watch] 
+2022-08-29 16:45:42.132  INFO 18124 --- [check-4] c.m.w.service.check.DateCheckService     : Java Server Date = Mon Aug 29 16:45:42 KST 2022
+2022-08-29 16:45:42.178  INFO 18124 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-29 16:45:42.178  INFO 18124 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-29 16:45:42.178  INFO 18124 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-29 16:45:44.062  INFO 18124 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-29 16:45:44.062  INFO 18124 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-29 16:45:44.062  INFO 18124 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-29 16:45:44.836  INFO 18124 --- [main] com.mig.watch.WatchLauncher              : *migJobService Start
+2022-08-29 16:45:44.836  INFO 18124 --- [check-2] c.m.w.service.check.DateCheckService     : Tobe database Date = 2022/08/29 16:45:43
+2022-08-29 16:45:44.836  INFO 18124 --- [check-3] c.m.w.service.check.DateCheckService     : Asis database Date = 2022/08/29 16:45:43
+2022-08-29 16:45:44.837  INFO 18124 --- [check-1] c.m.w.service.check.DateCheckService     : Mig database Date = 2022/08/29 16:45:43
+2022-08-29 16:45:44.852  INFO 18124 --- [main] com.mig.watch.service.MigJobService      : MigJobService MigJobMain migTblColMap size = 2
+2022-08-29 16:45:44.864  INFO 18124 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- START
+2022-08-29 16:45:44.866  INFO 18124 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:1] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 16:45:52.738  INFO 18124 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:2] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 16:46:11.435  INFO 18124 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- END
+2022-08-29 16:46:11.436  INFO 18124 --- [main] com.mig.watch.WatchLauncher              : * migJobService End -> Total time in seconds: 28.2963445
+2022-08-29 16:46:16.627  INFO 18124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-08-29 16:46:16.646  INFO 18124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-08-29 16:46:16.647  INFO 18124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-08-29 16:46:16.669  INFO 18124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-08-29 16:46:16.670  INFO 18124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-29 16:46:16.697  INFO 18124 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-29 16:46:18.526  INFO 13300 --- [main] com.mig.MigApplication                   : Starting MigApplication using Java 1.8.0_211 on G with PID 13300 (E:\project\mig\build\libs\mig-0.0.1-SNAPSHOT.jar started by User in E:\project\mig)
+2022-08-29 16:46:18.530  INFO 13300 --- [main] com.mig.MigApplication                   : The following 3 profiles are active: "dev", "file-logging", "watch"
+2022-08-29 16:46:20.345  INFO 13300 --- [main] com.mig.MigApplication                   : Started MigApplication in 2.492 seconds (JVM running for 3.034)
+2022-08-29 16:46:20.362  INFO 13300 --- [main] com.mig.watch.WatchLauncher              : spring.profiles.active = [dev, watch] 
+2022-08-29 16:46:20.389  INFO 13300 --- [check-4] c.m.w.service.check.DateCheckService     : Java Server Date = Mon Aug 29 16:46:20 KST 2022
+2022-08-29 16:46:20.426  INFO 13300 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-29 16:46:20.426  INFO 13300 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-29 16:46:20.426  INFO 13300 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-29 16:46:21.555  INFO 13300 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-29 16:46:21.555  INFO 13300 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-29 16:46:21.566  INFO 13300 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-29 16:46:21.966  INFO 13300 --- [check-1] c.m.w.service.check.DateCheckService     : Mig database Date = 2022/08/29 16:46:21
+2022-08-29 16:46:21.967  INFO 13300 --- [check-2] c.m.w.service.check.DateCheckService     : Tobe database Date = 2022/08/29 16:46:21
+2022-08-29 16:46:21.966  INFO 13300 --- [main] com.mig.watch.WatchLauncher              : *migJobService Start
+2022-08-29 16:46:21.990  INFO 13300 --- [main] com.mig.watch.service.MigJobService      : MigJobService MigJobMain migTblColMap size = 2
+2022-08-29 16:46:21.981  INFO 13300 --- [check-3] c.m.w.service.check.DateCheckService     : Asis database Date = 2022/08/29 16:46:21
+2022-08-29 16:46:21.991  INFO 13300 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- START
+2022-08-29 16:46:21.993  INFO 13300 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:1] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 16:46:29.504  INFO 13300 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:2] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 16:46:47.850  INFO 13300 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- END
+2022-08-29 16:46:47.870  INFO 13300 --- [main] com.mig.watch.WatchLauncher              : * migJobService End -> Total time in seconds: 26.4854097
+2022-08-29 16:47:51.931  INFO 13300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-29 16:47:51.956  INFO 13300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-29 16:47:51.957  INFO 13300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-08-29 16:47:51.980  INFO 13300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-08-29 16:47:51.982  INFO 13300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-08-29 16:47:52.006  INFO 13300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-08-29 16:47:54.679  INFO 7704 --- [main] com.mig.MigApplication                   : Starting MigApplication using Java 1.8.0_211 on G with PID 7704 (E:\project\mig\build\libs\mig-0.0.1-SNAPSHOT.jar started by User in E:\project\mig)
+2022-08-29 16:47:54.689  INFO 7704 --- [main] com.mig.MigApplication                   : The following 3 profiles are active: "dev", "file-logging", "watch"
+2022-08-29 16:47:56.361  INFO 7704 --- [main] com.mig.MigApplication                   : Started MigApplication in 2.406 seconds (JVM running for 3.088)
+2022-08-29 16:47:56.376  INFO 7704 --- [main] com.mig.watch.WatchLauncher              : spring.profiles.active = [dev, watch] 
+2022-08-29 16:47:56.407  INFO 7704 --- [check-4] c.m.w.service.check.DateCheckService     : Java Server Date = Mon Aug 29 16:47:56 KST 2022
+2022-08-29 16:47:56.445  INFO 7704 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-29 16:47:56.445  INFO 7704 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-29 16:47:56.445  INFO 7704 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-29 16:47:57.618  INFO 7704 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-29 16:47:57.618  INFO 7704 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-29 16:47:57.618  INFO 7704 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-29 16:47:58.090  INFO 7704 --- [check-3] c.m.w.service.check.DateCheckService     : Asis database Date = 2022/08/29 16:47:57
+2022-08-29 16:47:58.090  INFO 7704 --- [check-1] c.m.w.service.check.DateCheckService     : Mig database Date = 2022/08/29 16:47:57
+2022-08-29 16:47:58.091  INFO 7704 --- [check-2] c.m.w.service.check.DateCheckService     : Tobe database Date = 2022/08/29 16:47:57
+2022-08-29 16:47:58.090  INFO 7704 --- [main] com.mig.watch.WatchLauncher              : *migJobService Start
+2022-08-29 16:47:58.115  INFO 7704 --- [main] com.mig.watch.service.MigJobService      : MigJobService MigJobMain migTblColMap size = 2
+2022-08-29 16:47:58.116  INFO 7704 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- START
+2022-08-29 16:47:58.136  INFO 7704 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:1] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 16:48:03.303  INFO 7704 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:2] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 16:48:13.230  INFO 7704 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- END
+2022-08-29 16:48:13.231  INFO 7704 --- [main] com.mig.watch.WatchLauncher              : * migJobService End -> Total time in seconds: 15.8278732
+2022-08-29 16:49:04.377  INFO 7704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-08-29 16:49:04.402  INFO 7704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-08-29 16:49:04.402  INFO 7704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-29 16:49:04.420  INFO 7704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-29 16:49:04.424  INFO 7704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-08-29 16:49:04.446  INFO 7704 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
