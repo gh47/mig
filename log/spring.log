@@ -1089,3 +1089,75 @@ java.sql.SQLRecoverableException: 접속 종료
 2022-08-29 11:01:34.472  INFO 11668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 2022-08-29 11:01:34.472  INFO 11668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
 2022-08-29 11:01:34.500  INFO 11668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-08-29 14:34:03.668  INFO 11776 --- [main] com.mig.MigApplication                   : Starting MigApplication using Java 1.8.0_211 on G with PID 11776 (E:\project\mig\build\classes\java\main started by User in E:\project\mig)
+2022-08-29 14:34:03.672  INFO 11776 --- [main] com.mig.MigApplication                   : The following 3 profiles are active: "dev", "file-logging", "watch"
+2022-08-29 14:34:05.739  INFO 11776 --- [main] com.mig.MigApplication                   : Started MigApplication in 3.107 seconds (JVM running for 4.485)
+2022-08-29 14:34:05.745  INFO 11776 --- [main] com.mig.watch.WatchLauncher              : spring.profiles.active = [dev, watch] 
+2022-08-29 14:34:05.799  INFO 11776 --- [check-4] c.m.w.service.check.DateCheckService     : Java Server Date = Mon Aug 29 14:34:05 KST 2022
+2022-08-29 14:34:05.839  INFO 11776 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-29 14:34:05.839  INFO 11776 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-29 14:34:05.839  INFO 11776 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-29 14:34:07.360  INFO 11776 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-29 14:34:07.405  INFO 11776 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-29 14:34:07.406  INFO 11776 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-29 14:34:07.724  INFO 11776 --- [main] com.mig.watch.WatchLauncher              : *migJobService Start
+2022-08-29 14:34:07.726  INFO 11776 --- [check-2] c.m.w.service.check.DateCheckService     : Tobe database Date = 2022/08/29 14:34:06
+2022-08-29 14:34:07.722  INFO 11776 --- [check-3] c.m.w.service.check.DateCheckService     : Asis database Date = 2022/08/29 14:34:06
+2022-08-29 14:34:07.727  INFO 11776 --- [check-1] c.m.w.service.check.DateCheckService     : Mig database Date = 2022/08/29 14:34:06
+2022-08-29 14:34:07.729  INFO 11776 --- [main] com.mig.watch.service.MigJobService      : MigJobService MigJobMain migTblColMap size = 2
+2022-08-29 14:34:07.729  INFO 11776 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- START
+2022-08-29 14:34:07.729  INFO 11776 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:1] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 14:34:19.225  INFO 11776 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:2] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 14:34:45.558  INFO 11776 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- END
+2022-08-29 14:34:45.559  INFO 11776 --- [main] com.mig.watch.WatchLauncher              : * migJobService End -> Total time in seconds: 38.7598243
+2022-08-29 14:37:13.053  INFO 4236 --- [main] com.mig.MigApplication                   : Starting MigApplication using Java 1.8.0_211 on G with PID 4236 (E:\project\mig\build\classes\java\main started by User in E:\project\mig)
+2022-08-29 14:37:13.057  INFO 4236 --- [main] com.mig.MigApplication                   : The following 3 profiles are active: "dev", "file-logging", "watch"
+2022-08-29 14:37:14.643  INFO 4236 --- [main] com.mig.MigApplication                   : Started MigApplication in 2.331 seconds (JVM running for 3.161)
+2022-08-29 14:37:14.647  INFO 4236 --- [main] com.mig.watch.WatchLauncher              : spring.profiles.active = [dev, watch] 
+2022-08-29 14:37:14.663  INFO 4236 --- [check-4] c.m.w.service.check.DateCheckService     : Java Server Date = Mon Aug 29 14:37:14 KST 2022
+2022-08-29 14:37:14.687  INFO 4236 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-29 14:37:14.687  INFO 4236 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-29 14:37:14.687  INFO 4236 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-29 14:37:15.741  INFO 4236 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-29 14:37:15.741  INFO 4236 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-29 14:37:15.749  INFO 4236 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-29 14:37:15.970  INFO 4236 --- [check-2] c.m.w.service.check.DateCheckService     : Tobe database Date = 2022/08/29 14:37:15
+2022-08-29 14:37:15.972  INFO 4236 --- [main] com.mig.watch.WatchLauncher              : *migJobService Start
+2022-08-29 14:37:15.973  INFO 4236 --- [check-1] c.m.w.service.check.DateCheckService     : Mig database Date = 2022/08/29 14:37:15
+2022-08-29 14:37:15.976  INFO 4236 --- [main] com.mig.watch.service.MigJobService      : MigJobService MigJobMain migTblColMap size = 2
+2022-08-29 14:37:15.976  INFO 4236 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- START
+2022-08-29 14:37:15.977  INFO 4236 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:1] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 14:37:15.978  INFO 4236 --- [check-3] c.m.w.service.check.DateCheckService     : Asis database Date = 2022/08/29 14:37:15
+2022-08-29 14:37:27.115  INFO 4236 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:2] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 14:37:53.226  INFO 4236 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- END
+2022-08-29 14:37:53.226  INFO 4236 --- [main] com.mig.watch.WatchLauncher              : * migJobService End -> Total time in seconds: 37.5507309
+2022-08-29 16:31:18.687  INFO 15908 --- [Test worker] com.mig.MigApplicationTests              : Starting MigApplicationTests using Java 1.8.0_211 on G with PID 15908 (started by User in E:\project\mig)
+2022-08-29 16:31:18.690  INFO 15908 --- [Test worker] com.mig.MigApplicationTests              : No active profile set, falling back to 1 default profile: "default"
+2022-08-29 16:31:20.864  INFO 15908 --- [Test worker] com.mig.MigApplicationTests              : Started MigApplicationTests in 2.639 seconds (JVM running for 4.871)
+2022-08-29 16:32:54.025  INFO 9404 --- [main] com.mig.MigApplication                   : Starting MigApplication using Java 1.8.0_211 on G with PID 9404 (E:\project\mig\build\libs\mig-0.0.1-SNAPSHOT.jar started by User in E:\project\mig)
+2022-08-29 16:32:54.031  INFO 9404 --- [main] com.mig.MigApplication                   : The following 3 profiles are active: "dev", "file-logging", "watch"
+2022-08-29 16:32:56.412  INFO 9404 --- [main] com.mig.MigApplication                   : Started MigApplication in 3.175 seconds (JVM running for 3.998)
+2022-08-29 16:32:56.418  INFO 9404 --- [main] com.mig.watch.WatchLauncher              : spring.profiles.active = [dev, watch] 
+2022-08-29 16:32:56.434  INFO 9404 --- [check-4] c.m.w.service.check.DateCheckService     : Java Server Date = Mon Aug 29 16:32:56 KST 2022
+2022-08-29 16:32:56.466  INFO 9404 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-29 16:32:56.466  INFO 9404 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-29 16:32:56.466  INFO 9404 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-29 16:32:57.794  INFO 9404 --- [check-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-29 16:32:57.794  INFO 9404 --- [check-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-29 16:32:57.794  INFO 9404 --- [check-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-29 16:32:58.159  INFO 9404 --- [check-1] c.m.w.service.check.DateCheckService     : Mig database Date = 2022/08/29 16:32:57
+2022-08-29 16:32:58.160  INFO 9404 --- [main] com.mig.watch.WatchLauncher              : *migJobService Start
+2022-08-29 16:32:58.161  INFO 9404 --- [check-2] c.m.w.service.check.DateCheckService     : Tobe database Date = 2022/08/29 16:32:57
+2022-08-29 16:32:58.160  INFO 9404 --- [check-3] c.m.w.service.check.DateCheckService     : Asis database Date = 2022/08/29 16:32:57
+2022-08-29 16:32:58.165  INFO 9404 --- [main] com.mig.watch.service.MigJobService      : MigJobService MigJobMain migTblColMap size = 2
+2022-08-29 16:32:58.166  INFO 9404 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- START
+2022-08-29 16:32:58.167  INFO 9404 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:1] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 16:33:06.363  INFO 9404 --- [main] com.mig.watch.service.MigJobService      : migSqlTblVO = [seq:2] asis-SALT_TST_REQ_BD ---> tobe-SALT_TST_REQ_BD_TMP
+2022-08-29 16:33:28.043  INFO 9404 --- [main] com.mig.watch.service.MigJobService      : getSaltTstReqBdMain ----------------------------------------------------------------------------------------------------------- END
+2022-08-29 16:33:28.055  INFO 9404 --- [main] com.mig.watch.WatchLauncher              : * migJobService End -> Total time in seconds: 30.6130208
+2022-08-29 16:34:23.774  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-08-29 16:34:23.803  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-08-29 16:34:23.804  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-08-29 16:34:23.819  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-08-29 16:34:23.820  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-29 16:34:23.834  INFO 9404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

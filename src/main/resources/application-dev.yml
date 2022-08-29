@@ -30,6 +30,10 @@ spring:
         maximum-pool-size: 15
   config:
     use-legacy-processing: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
 logging:
   level:
