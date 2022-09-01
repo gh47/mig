@@ -60,20 +60,17 @@ public class DataSourceProperties {
     }
 
     @Bean(name = "asisJdbcDataSource")
-    @Autowired
     public JdbcTemplate asisJdbcTemplate(@Qualifier("asisDataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 
     @Bean(name = "tobeJdbcDataSource")
-    @Autowired
     public JdbcTemplate tobeJdbcTemplate(@Qualifier("tobeDataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 
     @Primary
     @Bean(name = "migJdbcDataSource")
-    @Autowired
     public JdbcTemplate migJdbcTemplate(@Qualifier("migDataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
