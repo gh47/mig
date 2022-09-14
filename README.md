@@ -7,8 +7,9 @@ java -Xms2048m -Xmx4096m -jar -Dspring.profiles.active=dev,watch E:\project\mig\
 CREATE TABEL MIG_SQL_TBL 
 (
     SEQ         NUMBER,
-    TBL_ASIS    VARCHAR(500),
-    TBL_TOBE    VARCHAR(500),
+    TBL_ASIS    VARCHAR2(500),
+    COL_ASIS    VARCHAR2(4000),
+    TBL_TOBE    VARCHAR2(500),
     COL_NAME       VARCHAR2(4000),
     COL_DATA_TYPE  VARCHAR2(4000),
     SQL_WHERE   VARCHAR2(4000),

@@ -83,7 +83,7 @@ public class MigBaseService {
     public String migSelectStringBuilder(MigSqlTblVO migSqlTblVO) {
         StringBuilder sqlSb = new StringBuilder();
         sqlSb.append("SELECT ");
-        sqlSb.append(migSqlTblVO.getColName());
+        sqlSb.append(migSqlTblVO.getColAsis());
         sqlSb.append(" ");
         sqlSb.append("FROM");
         sqlSb.append(" ");

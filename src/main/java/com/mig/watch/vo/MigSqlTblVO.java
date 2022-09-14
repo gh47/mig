@@ -11,6 +11,7 @@ public class MigSqlTblVO {
 
     private int seq;
     private String tblAsis;
+    private String colAsis;
     private String tblTobe;
     private String colName;
     private String colDataType;

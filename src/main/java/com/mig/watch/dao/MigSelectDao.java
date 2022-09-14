@@ -62,7 +62,7 @@ public class MigSelectDao {
         LinkedHashMap<String, MigColInfoVO> colInfoMap = MigBaseService.seqColInfoMap.get(seq);
 
         String sql = migSqlTblVO.getSelectStr();
-
+        log.info("migSqlTblVO = {}", sql);
         if(migSqlTblVO.getDivOutCnt() > 0) {
             jdbcTemplate.setFetchSize(migSqlTblVO.getDivOutCnt());
         } else {
